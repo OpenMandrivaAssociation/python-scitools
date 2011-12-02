@@ -2,13 +2,13 @@
 
 Summary:	Python library for scientific computing
 Name:		python-scitools
-Version:	0.7
+Version:	0.8
 Release:	%mkrel 1
 License:	BSD
 Group:		Development/Python
 Url:		http://scitools.googlecode.com
 Source0:	http://scitools.googlecode.com/files/%{module}-%{version}.tar.gz
-Requires:	python-gnuplot python-numpy
+Requires:	python-gnuplot python-numpy python-matplotlib
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -21,18 +21,18 @@ such as NumPy, SciPy, ScientificPython, Gnuplot, etc.
 %setup -qn %{module}-%{version}
 
 %build
-python setup.py build
+%__python setup.py build
 
 %install
-rm -rf %{buildroot}
-python setup.py install --root=%{buildroot}
-
+%__rm -rf %{buildroot}
+%__python setup.py install --root=%{buildroot}
+mv doc/easyviz/easyviz_sphinx_html html
 %clean
-rm -rf %{buildroot}
+%__rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc README LICENSE ChangeLog
+%doc README LICENSE ChangeLog html/ examples/
 %{_bindir}/pyreport
 %{_bindir}/scitools
 %{_mandir}/man1/pyreport.1*
