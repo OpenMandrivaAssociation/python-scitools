@@ -44,3 +44,14 @@ mv doc/easyviz/easyviz_sphinx_html html
 %{python_sitelib}/%{module}/easyviz/*.py*
 %{python_sitelib}/*.egg-info
 
+
+
+%changelog
+* Fri Dec 02 2011 Lev Givon <lev@mandriva.org> 0.8-1mdv2011.0
++ Revision: 737282
+- Update to 0.8.
+  Require python-matplotlib.
+
+  + Per Øyvind Karlsen <peroyvind@mandriva.org>
+    - import python-scitools
+
