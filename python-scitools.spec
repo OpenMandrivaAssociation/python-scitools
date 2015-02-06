@@ -3,7 +3,7 @@
 Summary:	Python library for scientific computing
 Name:		python-scitools
 Version:	0.8
-Release:	%mkrel 1
+Release:	2
 License:	BSD
 Group:		Development/Python
 Url:		http://scitools.googlecode.com
