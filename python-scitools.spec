@@ -6,7 +6,7 @@ Version:	0.8
 Release:	2
 License:	BSD
 Group:		Development/Python
-Url:		http://scitools.googlecode.com
+Url:		https://scitools.googlecode.com
 Source0:	http://scitools.googlecode.com/files/%{module}-%{version}.tar.gz
 Requires:	python-gnuplot python-numpy python-matplotlib
 BuildArch:	noarch
